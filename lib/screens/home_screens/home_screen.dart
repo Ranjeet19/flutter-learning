@@ -1,254 +1,227 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/config/colors.dart';
+import 'package:food_app/screens/home_screens/single_product.dart';
+import 'drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   // this  is the function where first scrollable foods are placed
-  Widget singleProducts() {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
-      height: 191,
-      width: 150,
-      decoration: BoxDecoration(
-        color: Colors.white54,
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Expanded(
-            flex: 0,
-            child: Image.network(
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lapte_Bhowe.jpg/220px-Lapte_Bhowe.jpg"),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Newari Food",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "Rs 150/- ",
-                    style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                            height: 25,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              // color: Colors.red,
-                              borderRadius: BorderRadius.circular(50),
-                              border: Border.all(color: Colors.grey),
-                            ),
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 5.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text("50 gm",
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.bold,
-                                      )),
-                                  Icon(
-                                    Icons.arrow_drop_down_outlined,
-                                    color: Colors.yellow,
-                                    size: 20,
-                                  )
-                                ],
-                              ),
-                            )),
-                        Container(
-                            height: 25,
-                            width: 50,
-                            //  color: Colors.blue,
-                            decoration: BoxDecoration(
-                              // color: Colors.red,
-                              borderRadius: BorderRadius.circular(50),
-                              border: Border.all(color: Colors.grey),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 6.0),
-                                  child: Icon(
-                                    Icons.remove,
-                                    size: 15,
-                                  ),
-                                ),
-                                Text(
-                                  "1",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.black54,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 6.0),
-                                  child: Icon(
-                                    Icons.add,
-                                    size: 15,
-                                  ),
-                                ),
-                              ],
-                            ))
-                      ],
-                    ),
-                  )
-                ],
+  // Widget singleProducts() {
+  // }
+
+  Widget _buildCulturalFoods(context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Best Cultural Foods",
+                style: TextStyle(fontSize: 18),
               ),
-            ),
+              Text(
+                "View All",
+                style: TextStyle(color: Colors.grey, fontSize: 13),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lapte_Bhowe.jpg/220px-Lapte_Bhowe.jpg",
+                productName: "Newari Food",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "http://www.beyultreks.com/wp-content/uploads/2017/06/dal-bhat-Nepalese-food.jpg",
+                productName: "Thakali Food",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://www.thegundruk.com/wp-content/uploads/2016/01/IMG_0161.jpg",
+                productName: "Tharu Food",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://www.tourismmail.com/public/uploads/2018/09/images/magar-food-festival.jpg",
+                productName: "Magar Food",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEK8UEZJek-8Tll0saRqNlTBbmChYgWbvkbeIVgf6pnlSZ0-Eq7oxHcmfZxPBn4EeUUM&usqp=CAU",
+                productName: "Gundruk Dhindo",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://gallery.thelongestwayhome.com/img/s1/v56/p630569877-4.jpg",
+                productName: "Cheeura Vojh",
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildFastFoods() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Best Fast Foods Of Nepal",
+                style: TextStyle(fontSize: 18),
+              ),
+              Text(
+                "View All",
+                style: TextStyle(color: textColor, fontSize: 13),
+              ),
+            ],
+          ),
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://3.bp.blogspot.com/-eXIP5zRiFPU/W4zFLF6GSLI/AAAAAAAAQWw/HxXI27Mj1yoLdHxMe7h_tPrEw-c9vZmzgCLcBGAs/s640/Momo.jpg",
+                productName: "MOMO's",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://media-cdn.tripadvisor.com/media/photo-s/0e/08/54/89/my-burger-meal-rs-250.jpg",
+                productName: "Burger",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmEX6eXI6fCrIf5ZqQCQdGz4_zQVTctU4HioP-Ml4z3MXlmwhPXnKMoQIGXDTIEfZqH0&usqp=CAU",
+                productName: "Samosa",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://thefoodxp.com/wp-content/uploads/2019/12/6fbc6859-e2b1-499d-b0fa-ada600c9cc3f.jpg",
+                productName: "Crispy KFC",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUGGLagyB4VLxz8RcxzjnZJKZZ8l4NRf-7U8ZDnnPTo9b9XwbSKZfWwKEfTtbbEQvL8Qo&usqp=CAU",
+                productName: "chowmien",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://i0.wp.com/utsav360.com/wp-content/uploads/2019/08/How-to-make-spicy-laphing-noodle.jpg?fit=1203%2C800&ssl=1",
+                productName: "Laphing",
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _bakeryFoods(){
+      return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Best Cultural Foods",
+                style: TextStyle(fontSize: 18),
+              ),
+              Text(
+                "View All",
+                style: TextStyle(color: textColor, fontSize: 13),
+              ),
+            ],
+          ),
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "http://4.bp.blogspot.com/-hFFYT7UEBVE/T2i4Z033EOI/AAAAAAAAOVI/9Eqg1-iScuI/s1600/Nepal+2007+134.jpg",
+                productName: "Lakhamari",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://nepaltraveller.com/images/main/1578894009.sidetrackimageIMG_8166.jpg",
+                productName: "Gwarmari",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://myrepublica.nagariknetwork.com/uploads/media/2018/November/tihar-treats.jpg",
+                productName: "Tihar Mithai",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCDckaKPVnVAB4fvFSoPZhuruXsuuzwCd6-yLlbjeXPqeaGzC88EDvgRUdpgsgbsT01uA&usqp=CAU",
+                productName: "Customezed Cake",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzd2Av6dok6zkSUjIFG6sb7CqqS5ud5T51WPSx8Vvc3WTkud50N_vIodXfJIp8z7N-lYs&usqp=CAU",
+                productName: "Milk Pedaa",
+              ),
+              SingalProduct(
+                onTap: () {},
+                productImage:
+                    "http://nepalecoadventure.com/wp-content/uploads/2016/02/laddu.jpg",
+                productName: "Basen Laddu",
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
 
-  Widget listTile({required IconData icon,required String title}){
-    return ListTile(
-      leading:Icon(icon,size:24),
-      title: Text(title,
-      style: TextStyle(color: Colors.black45,fontSize: 16),),
-      );
 
-    
-  }
+
+
+
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffcbcbcb),
-      drawer: Drawer(
-
-        child:Container(
-          color:Color(0xffd6b738),
-          child: ListView(
-            children: <Widget>[
-                DrawerHeader(
-                  child: Row(
-                    children:<Widget>[
-                    
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundColor: Colors.white,
-                        child: CircleAvatar(
-                          radius:36,
-                          backgroundColor:Color(0xffd6b2323) ),
-                        
-                      ),
-                    
-                    SizedBox(width: 10,),
-
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment:CrossAxisAlignment.start,
-                      children: [
-                        Text("Hello Foodiee!!",style:TextStyle(fontSize: 16,fontWeight: FontWeight.w700)),
-                        SizedBox(height: 5,),
-                        Container(
-                       
-                          height: 23,
-                          width: 60,
-                          decoration: BoxDecoration(
-
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(20),
-                            
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal:11.0),
-                            child: Text("LogIn",style: TextStyle(fontSize: 14,fontWeight:FontWeight.w500,color:Colors.white),),
-                          ),
-                        )
-                      ],
-                    )
-                    ]
-                  )
-
-                ),
-
-
-                listTile(icon: Icons.home, title: "Home"),
-                
-                listTile(icon: Icons.shop_outlined, title: "Review Cart"),
-
-                listTile(icon: Icons.person_outline, title: "My Profile"),
-
-                listTile(icon: Icons.notifications_outlined, title: "Notification"),
-
-                listTile(icon: Icons.star_outline, title: "Rating & Reviews"),
-
-                listTile(icon: Icons.favorite_outline, title: "Whitelist"),
-
-                listTile(icon: Icons.copy_outlined, title: "Raise a Compliment"),
-                
-                listTile(icon: Icons.format_quote_outlined, title: "FAQs"),
-
-
-                    // SizedBox(height: 5,),
-                Container(
-                    height: 100,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Column(
-                      children: [
-                      Row(
-                        children: [
-                          Text("Contact For Support",style: TextStyle(fontWeight: FontWeight.w700),),
-                        ],
-                      ),
-                      SizedBox(height: 1,),
-                    
-
-                      Row(
-                          
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                        Text("Call Us :",style: TextStyle(fontWeight: FontWeight.w700),),
-                         SizedBox(width: 10,),
-
-                        Text(" 9823292366"),
-
-                      ],),
-
-                      Row(
-                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                        Text("Mail Us :",style: TextStyle(fontWeight: FontWeight.w700),),
-                        SizedBox(width: 10,),
-                        Text("shrestharohit2014@gmail.com"),
-                      ],)
-                    ]),
-                  ),
-                ),
-
-
-                // Text(" V2.0",style:TextStyle(fontWeight: FontWeight.bold),),
-
-
-
-            ],
-          ),
-        ),
-      ),
+      drawer: DrawerSide(),
       appBar: AppBar(
         iconTheme: IconThemeData(
           color: Colors.black,
@@ -298,132 +271,120 @@ class HomeScreen extends StatelessWidget {
                           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7dNo_6pCKAmLb8s3SktQMuK2aOhuAERTQug&usqp=CAU"))),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Best Cultural Foods",
-                  style: TextStyle(fontSize: 18),
-                ),
-                Text(
-                  "View All",
-                  style: TextStyle(color: Colors.grey, fontSize: 13),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: <Widget>[
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                ],
-              ),
-            ),
-          ),
 
+          _buildCulturalFoods(context),
 
-            Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Dry Foods",
-                  style: TextStyle(fontSize: 18),
-                ),
-                Text(
-                  "View All",
-                  style: TextStyle(color: Colors.grey, fontSize: 13),
-                ),
-              ],
-            ),
-          ),
+          _buildFastFoods(),
 
+          _bakeryFoods(),
+          
 
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: SingleChildScrollView(
-              physics: const NeverScrollableScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: <Widget>[
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                ],
-              ),
-            ),
-          ),
-                    Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Best Foods",
-                  style: TextStyle(fontSize: 18),
-                ),
-                Text(
-                  "View All",
-                  style: TextStyle(color: Colors.grey, fontSize: 13),
-                ),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(10.0),
+          //   child: SingleChildScrollView(
+          //     scrollDirection: Axis.horizontal,
+          //     child: Row(
+          //       children: <Widget>[
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //       ],
+          //     ),
+          //   ),
+          // ),
 
+          //   Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 12),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Text(
+          //         "Dry Foods",
+          //         style: TextStyle(fontSize: 18),
+          //       ),
+          //       Text(
+          //         "View All",
+          //         style: TextStyle(color: Colors.grey, fontSize: 13),
+          //       ),
+          //     ],
+          //   ),
+          // ),
 
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: <Widget>[
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                  singleProducts(),
-                ],
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(10.0),
+          //   child: SingleChildScrollView(
+          //     physics: const NeverScrollableScrollPhysics(),
+          //     scrollDirection: Axis.horizontal,
+          //     child: Row(
+          //       children: <Widget>[
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //       ],
+          //     ),
+          //   ),
+          // ),
+          //           Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 12),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Text(
+          //         "Best Foods",
+          //         style: TextStyle(fontSize: 18),
+          //       ),
+          //       Text(
+          //         "View All",
+          //         style: TextStyle(color: Colors.grey, fontSize: 13),
+          //       ),
+          //     ],
+          //   ),
+          // ),
 
+          // Padding(
+          //   padding: const EdgeInsets.all(10.0),
+          //   child: SingleChildScrollView(
+          //     physics: BouncingScrollPhysics(),
+          //     scrollDirection: Axis.horizontal,
+          //     child: Row(
+          //       children: <Widget>[
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //         singleProducts(),
+          //       ],
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

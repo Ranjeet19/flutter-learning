@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/config/colors.dart';
 import 'package:food_app/screens/home_screens/home_screen.dart';
 
 import 'authentication/sing_in.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
    
-        primarySwatch: Colors.blue,
+        primaryColor: primaryColor,
+        scaffoldBackgroundColor: scaffoldBackgroundColor,
       ),
       home:HomeScreen(),
     );
