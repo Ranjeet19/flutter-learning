@@ -33,7 +33,7 @@ class SingalProduct extends StatelessWidget {
             onTap: onTap,
             child: Expanded(
               
-              flex: 0,
+              flex: 1,
               child: Image.network(
                  productImage),
             ),

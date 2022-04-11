@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/config/colors.dart';
 import 'package:food_app/screens/home_screens/single_product.dart';
+import 'package:food_app/screens/product%20_overview/product_overview.dart';
 import 'drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -35,37 +36,84 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             children: [
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                        productName: "Newari Food",
+                        productImage:
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lapte_Bhowe.jpg/220px-Lapte_Bhowe.jpg"),
+                  ));
+                },
                 productImage:
                     "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lapte_Bhowe.jpg/220px-Lapte_Bhowe.jpg",
                 productName: "Newari Food",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "http://www.beyultreks.com/wp-content/uploads/2017/06/dal-bhat-Nepalese-food.jpg",
+                      productName: "Thakali Food",
+                    ),
+                  ));
+                },
                 productImage:
                     "http://www.beyultreks.com/wp-content/uploads/2017/06/dal-bhat-Nepalese-food.jpg",
                 productName: "Thakali Food",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://www.thegundruk.com/wp-content/uploads/2016/01/IMG_0161.jpg",
+                      productName: "Tharu Food",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://www.thegundruk.com/wp-content/uploads/2016/01/IMG_0161.jpg",
                 productName: "Tharu Food",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://www.tourismmail.com/public/uploads/2018/09/images/magar-food-festival.jpg",
+                      productName: "Magar Food",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://www.tourismmail.com/public/uploads/2018/09/images/magar-food-festival.jpg",
                 productName: "Magar Food",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEK8UEZJek-8Tll0saRqNlTBbmChYgWbvkbeIVgf6pnlSZ0-Eq7oxHcmfZxPBn4EeUUM&usqp=CAU",
+                      productName: "Gundruk Dhindo",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDEK8UEZJek-8Tll0saRqNlTBbmChYgWbvkbeIVgf6pnlSZ0-Eq7oxHcmfZxPBn4EeUUM&usqp=CAU",
                 productName: "Gundruk Dhindo",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://gallery.thelongestwayhome.com/img/s1/v56/p630569877-4.jpg",
+                      productName: "Cheeura Vojh",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://gallery.thelongestwayhome.com/img/s1/v56/p630569877-4.jpg",
                 productName: "Cheeura Vojh",
@@ -77,7 +125,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildFastFoods() {
+  Widget _buildFastFoods(context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -102,37 +150,85 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             children: [
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://3.bp.blogspot.com/-eXIP5zRiFPU/W4zFLF6GSLI/AAAAAAAAQWw/HxXI27Mj1yoLdHxMe7h_tPrEw-c9vZmzgCLcBGAs/s640/Momo.jpg",
+                      productName: "MOMO's",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://3.bp.blogspot.com/-eXIP5zRiFPU/W4zFLF6GSLI/AAAAAAAAQWw/HxXI27Mj1yoLdHxMe7h_tPrEw-c9vZmzgCLcBGAs/s640/Momo.jpg",
                 productName: "MOMO's",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://media-cdn.tripadvisor.com/media/photo-s/0e/08/54/89/my-burger-meal-rs-250.jpg",
+                      productName: "Burger",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://media-cdn.tripadvisor.com/media/photo-s/0e/08/54/89/my-burger-meal-rs-250.jpg",
                 productName: "Burger",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmEX6eXI6fCrIf5ZqQCQdGz4_zQVTctU4HioP-Ml4z3MXlmwhPXnKMoQIGXDTIEfZqH0&usqp=CAU",
+                      productName: "Samosa",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmEX6eXI6fCrIf5ZqQCQdGz4_zQVTctU4HioP-Ml4z3MXlmwhPXnKMoQIGXDTIEfZqH0&usqp=CAU",
                 productName: "Samosa",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://thefoodxp.com/wp-content/uploads/2019/12/6fbc6859-e2b1-499d-b0fa-ada600c9cc3f.jpg",
+                      productName: "Crispy KFC",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://thefoodxp.com/wp-content/uploads/2019/12/6fbc6859-e2b1-499d-b0fa-ada600c9cc3f.jpg",
                 productName: "Crispy KFC",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUGGLagyB4VLxz8RcxzjnZJKZZ8l4NRf-7U8ZDnnPTo9b9XwbSKZfWwKEfTtbbEQvL8Qo&usqp=CAU",
+                      productName: "chowmien",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUGGLagyB4VLxz8RcxzjnZJKZZ8l4NRf-7U8ZDnnPTo9b9XwbSKZfWwKEfTtbbEQvL8Qo&usqp=CAU",
                 productName: "chowmien",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://i0.wp.com/utsav360.com/wp-content/uploads/2019/08/How-to-make-spicy-laphing-noodle.jpg?fit=1203%2C800&ssl=1",
+                      productName: "Laphing",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://i0.wp.com/utsav360.com/wp-content/uploads/2019/08/How-to-make-spicy-laphing-noodle.jpg?fit=1203%2C800&ssl=1",
                 productName: "Laphing",
@@ -144,8 +240,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _bakeryFoods(){
-      return Column(
+  Widget _bakeryFoods(context) {
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
@@ -169,37 +265,85 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             children: [
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "http://4.bp.blogspot.com/-hFFYT7UEBVE/T2i4Z033EOI/AAAAAAAAOVI/9Eqg1-iScuI/s1600/Nepal+2007+134.jpg",
+                      productName: "Lakhamari",
+                    ),
+                  ));
+                },
                 productImage:
                     "http://4.bp.blogspot.com/-hFFYT7UEBVE/T2i4Z033EOI/AAAAAAAAOVI/9Eqg1-iScuI/s1600/Nepal+2007+134.jpg",
                 productName: "Lakhamari",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://nepaltraveller.com/images/main/1578894009.sidetrackimageIMG_8166.jpg",
+                      productName: "Gwarmari",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://nepaltraveller.com/images/main/1578894009.sidetrackimageIMG_8166.jpg",
                 productName: "Gwarmari",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://myrepublica.nagariknetwork.com/uploads/media/2018/November/tihar-treats.jpg",
+                      productName: "Tihar Mithai",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://myrepublica.nagariknetwork.com/uploads/media/2018/November/tihar-treats.jpg",
                 productName: "Tihar Mithai",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCDckaKPVnVAB4fvFSoPZhuruXsuuzwCd6-yLlbjeXPqeaGzC88EDvgRUdpgsgbsT01uA&usqp=CAU",
+                      productName: "Customezed Cake",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCDckaKPVnVAB4fvFSoPZhuruXsuuzwCd6-yLlbjeXPqeaGzC88EDvgRUdpgsgbsT01uA&usqp=CAU",
                 productName: "Customezed Cake",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzd2Av6dok6zkSUjIFG6sb7CqqS5ud5T51WPSx8Vvc3WTkud50N_vIodXfJIp8z7N-lYs&usqp=CAU",
+                      productName: "Milk Pedaa",
+                    ),
+                  ));
+                },
                 productImage:
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzd2Av6dok6zkSUjIFG6sb7CqqS5ud5T51WPSx8Vvc3WTkud50N_vIodXfJIp8z7N-lYs&usqp=CAU",
                 productName: "Milk Pedaa",
               ),
               SingalProduct(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => ProductOverview(
+                      productImage:
+                          "http://nepalecoadventure.com/wp-content/uploads/2016/02/laddu.jpg",
+                      productName: "Basen Laddu",
+                    ),
+                  ));
+                },
                 productImage:
                     "http://nepalecoadventure.com/wp-content/uploads/2016/02/laddu.jpg",
                 productName: "Basen Laddu",
@@ -211,12 +355,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-
-
-
-
-
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -274,10 +412,9 @@ class HomeScreen extends StatelessWidget {
 
           _buildCulturalFoods(context),
 
-          _buildFastFoods(),
+          _buildFastFoods(context),
 
-          _bakeryFoods(),
-          
+          _bakeryFoods(context),
 
           // Padding(
           //   padding: const EdgeInsets.all(10.0),
