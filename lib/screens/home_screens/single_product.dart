@@ -29,11 +29,16 @@ class SingalProduct extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+
+          //This Below line is commented because of expanded cant be inside Gesture except Row Column or flex so
+
+
           GestureDetector(
             onTap: onTap,
-            child: Expanded(
+            child: 
+           Container(
               
-              flex: 1,
+              
               child: Image.network(
                  productImage),
             ),

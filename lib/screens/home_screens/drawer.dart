@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/home_screens/home_screen.dart';
 import 'package:food_app/screens/my_profile/my_profile.dart';
+import 'package:food_app/screens/review%20cart/review_cart.dart';
 
 class DrawerSide extends StatelessWidget {
   const DrawerSide({Key? key}) : super(key: key);
@@ -82,7 +83,7 @@ class DrawerSide extends StatelessWidget {
           listTile(
               onTap: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: ((context) => MyProfile())));
+                    MaterialPageRoute(builder: ((context) => ReviewCart())));
               },
               icon: Icons.shop_outlined,
               title: "Review Cart"),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/config/colors.dart';
 import 'package:food_app/screens/home_screens/single_product.dart';
 import 'package:food_app/screens/product%20_overview/product_overview.dart';
+import 'package:food_app/screens/search/search.dart';
 import 'drawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -370,25 +371,37 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: Color(0xffd6b738),
         actions: [
+
+
+
+           CircleAvatar(
+            backgroundColor: Color(0xffd4d181),
+            radius: 15,
+            child: IconButton(
+              onPressed: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Search()));
+                
+              },
+              icon:Icon(Icons.search,
+              size: 18,
+              color: Colors.black,)
+            ),
+          ),
+
+
+          SizedBox(
+                    width: 10,
+                  ),
+
           CircleAvatar(
             radius: 15,
             backgroundColor: Color(0xffd4d181),
             // color:Colors.white,
-            child: Icon(Icons.search, size: 18, color: Colors.black),
+            child: Icon(Icons.shopping_cart, size: 18, color: Colors.black),
           ),
           Padding(padding: EdgeInsets.symmetric(horizontal: 5)),
-          CircleAvatar(
-            backgroundColor: Color(0xffd4d181),
-            radius: 15,
-            child: Icon(
-              Icons.shopping_cart,
-              size: 18,
-              color: Colors.black,
-            ),
-          ),
-          SizedBox(
-            width: 10,
-          )
+         
+        
         ],
       ),
       body: ListView(
@@ -416,112 +429,7 @@ class HomeScreen extends StatelessWidget {
 
           _bakeryFoods(context),
 
-          // Padding(
-          //   padding: const EdgeInsets.all(10.0),
-          //   child: SingleChildScrollView(
-          //     scrollDirection: Axis.horizontal,
-          //     child: Row(
-          //       children: <Widget>[
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //       ],
-          //     ),
-          //   ),
-          // ),
 
-          //   Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 12),
-          //   child: Row(
-          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //     children: [
-          //       Text(
-          //         "Dry Foods",
-          //         style: TextStyle(fontSize: 18),
-          //       ),
-          //       Text(
-          //         "View All",
-          //         style: TextStyle(color: Colors.grey, fontSize: 13),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-
-          // Padding(
-          //   padding: const EdgeInsets.all(10.0),
-          //   child: SingleChildScrollView(
-          //     physics: const NeverScrollableScrollPhysics(),
-          //     scrollDirection: Axis.horizontal,
-          //     child: Row(
-          //       children: <Widget>[
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //       ],
-          //     ),
-          //   ),
-          // ),
-          //           Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 12),
-          //   child: Row(
-          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //     children: [
-          //       Text(
-          //         "Best Foods",
-          //         style: TextStyle(fontSize: 18),
-          //       ),
-          //       Text(
-          //         "View All",
-          //         style: TextStyle(color: Colors.grey, fontSize: 13),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-
-          // Padding(
-          //   padding: const EdgeInsets.all(10.0),
-          //   child: SingleChildScrollView(
-          //     physics: BouncingScrollPhysics(),
-          //     scrollDirection: Axis.horizontal,
-          //     child: Row(
-          //       children: <Widget>[
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //         singleProducts(),
-          //       ],
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
